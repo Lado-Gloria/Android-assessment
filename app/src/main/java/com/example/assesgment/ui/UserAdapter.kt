@@ -78,18 +78,6 @@ class UserAdapter(val userList: List<User>,var context: Context) : RecyclerView.
 
 
 
-    override fun getItemCount(): Int {
-        return productsList.size
-    }
-
-    override fun onBindViewHolder(holder: ProductViewHolder, position: Int) {
-
-
-
-    }
-
-}
-
 
 
 
