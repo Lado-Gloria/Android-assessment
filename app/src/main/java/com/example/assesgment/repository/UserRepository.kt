@@ -11,13 +11,11 @@ class UserRepository {
 
     private val apiInterface: ApiInterface = ApiClient.buildClient(ApiInterface::class.java)
 
-    suspend fun getProducts(): Response<UserRespond> {
+    suspend fun getUser() {
         return withContext(Dispatchers.IO) {
-            apiInterface.getProducts()
+            apiInterface.getUser()
         }
     }
 
-    fun getUser(): Any {
 
-    }
 }
