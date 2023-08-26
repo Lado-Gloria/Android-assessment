@@ -8,10 +8,9 @@ import retrofit2.http.Path
 
 interface ApiInterface {
     @GET("/user")
-    suspend fun getProducts(): Response<UserRespond>
+    suspend fun getUser(): Response<UserRespond>
 
-    @GET("/user/{id}") // Use the correct endpoint path
+    @GET("/user/{id}")
     suspend fun getUserById(@Path("id") userId: Int): Response<User>
-    fun getUser()
 }
 

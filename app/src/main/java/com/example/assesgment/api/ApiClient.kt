@@ -5,6 +5,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object ApiClient {
 
+
     private val retrofit = Retrofit.Builder()
         .baseUrl("https://jsonplaceholder.typicode.com") // Correct base URL
         .addConverterFactory(GsonConverterFactory.create())

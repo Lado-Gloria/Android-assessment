@@ -9,11 +9,11 @@ import retrofit2.Response
 
 class UserRepository {
 
-    private val apiInterface: ApiInterface = ApiClient.buildClient(ApiInterface::class.java)
+    val apiClient= ApiClient.buildClient(ApiInterface::class.java)
 
-    suspend fun getUser() {
+    suspend fun getUser():Response<UserRespond> {
         return withContext(Dispatchers.IO) {
-            apiInterface.getUser()
+            apiClient.getUser()
         }
     }
 

@@ -19,6 +19,7 @@ class UserDetailActivity : AppCompatActivity() {
     private lateinit var apiinterface: ApiInterface
     private var userId = -1
     private var user: User? = null
+
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,9 +29,9 @@ class UserDetailActivity : AppCompatActivity() {
         val bundle = intent.extras
         if (bundle != null) {
             userId = bundle.getInt("USER_ID", -1)
-    }
+        }
         fetchUserDetails()
-}
+    }
 
 
     private fun fetchUserDetails() {
@@ -58,9 +59,10 @@ class UserDetailActivity : AppCompatActivity() {
         }
     }
 
-    private fun  displayUserDetails() {
+    private fun displayUserDetails() {
         // Check if product is not null and display its details in the UI
         user?.let {
-            binding.tvdescript.text=it.description
-        }
 
+        }
+    }
+}
